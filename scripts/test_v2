@@ -1,0 +1,13 @@
+#!/bin/bash
+# Expectations
+expectedResult='Hello, world!'
+# Build
+cargo build
+# Run
+actualResult=$(target/debug/helloworld2)
+# Verify
+if [ "$expectedResult" = "$actualResult" ]; then
+        echo "Success, returned expected result"
+else
+        echo "Failure, returned: $actualResult"
+fi
