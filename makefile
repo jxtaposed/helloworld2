@@ -1,11 +1,12 @@
-run:
-	cargo run
+run: build
+	./target/debug/helloworld2
 
-build:
-	cargo build 
+build: clean
+	./scripts/build*
+ 
 
-test:
+test: build
 	./scripts/test*
 
 clean:
-	rm -r ./target/*
+	rm -fr /target
